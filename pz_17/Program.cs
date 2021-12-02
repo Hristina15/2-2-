@@ -10,22 +10,22 @@ namespace pz_17
     {
         //16 вариант
 
-        static void Factorial(uint n)
+        static ulong Factorial(uint n)
         {
             int m = Convert.ToInt32(Console.ReadLine());
-            uint f = 1;
-            for (uint i = 1; m >= i; ++i)
+            int f = 1;
+            for (int i = 1; m >= i; ++i)
             {
                 f = f * i;
             }
-            Console.WriteLine($"Факториал числа {n} равен {f}");
+            return Convert.ToUInt64(f);
         }
 
         static void Main(string[] args)
         {
             Console.Write("n = ");
             var n = Convert.ToUInt32(Console.ReadLine());
-            Factorial(n);
+            Console.WriteLine($"Факториал числа {n} равен {Factorial(n)}");
             Console.ReadLine();
         }
     }
